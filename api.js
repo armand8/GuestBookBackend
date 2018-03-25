@@ -28,8 +28,8 @@ app.get('/api/signatures', function(req, res) {
 //====POST NEW SIGNATURE===//
 app.post('/api/signatures', function(req, res) {
   Signature.create({
-    guestSignature: req.body.SignatureOfGuest,
-    message: req.body.MessageofGuest,
+      signatureOfGuest: req.body.SignatureOfGuest,
+      messageOfGuest: req.body.MessageofGuest,
   }).then(signature => {
     res.json(signature)
   });
