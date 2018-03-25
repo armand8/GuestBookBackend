@@ -11,6 +11,9 @@ const app = express();
 const url = "mongodb://armand8:sandrillon@ds225308.mlab.com:25308/armand8";
 
 
+//=====SET BODY PARSER======//
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 //=========================//
 
 //====ROOT DIRECTORY===//
@@ -27,14 +30,12 @@ app.get('/api/signatures', function(req, res) {
 //==========================//
 //====POST NEW SIGNATURE===//
 app.post('/api/signatures', function(req, res) {
-    var message = req.body.signatureOfGuest;
-    /* console.log(message.signatureOfGuest)
        Signature.create({
        signatureOfGuest: req.body.signatureOfGuest,
        messageOfGuest: req.body.messageOfGuest,
    }).then(signature => {
      res.json(signature)
-   });*/
+   });
 });
 //==========================//
 
