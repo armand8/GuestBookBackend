@@ -29,12 +29,12 @@ app.get('/api/signatures', function(req, res) {
 app.post('/api/signatures', function(req, res) {
     var message = req.body;
     console.log(message.signatureOfGuest)
-  Signature.create({
+/*  Signature.create({
       signatureOfGuest: req.body.signatureOfGuest,
       messageOfGuest: req.body.messageOfGuest,
   }).then(signature => {
     res.json(signature)
-  });
+  });*/
 });
 //==========================//
 
