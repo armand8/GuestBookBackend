@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 const signatureSchema = new Schema({
-  guestSignature: {
+    signatureOfGuest: {
     type: mongoose.Schema.Types.Mixed,
     required: true,
   },
-  message: {
+    messageOfGuest: {
     type: mongoose.Schema.Types.Mixed,
     required: true,
   },
