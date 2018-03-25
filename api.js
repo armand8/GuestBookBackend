@@ -27,7 +27,7 @@ app.get('/api/signatures', function(req, res) {
 //==========================//
 //====POST NEW SIGNATURE===//
 app.post('/api/signatures', function(req, res) {
-    var message = req.body;
+    var message = req.body.signatureOfGuest;
     /* console.log(message.signatureOfGuest)
        Signature.create({
        signatureOfGuest: req.body.signatureOfGuest,
