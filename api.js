@@ -7,7 +7,7 @@ const expressValidator = require('express-validator');
 const mongoose = require('mongoose');
 const Signature = require('./models/signature.js')
 const app = express();
-const url = "mongodb://armand8:sandrillon@ds225308.mlab.com:25308/armand8";
+const url = "mongodb://guestbook_app_example:react123@ds225308.mlab.com:25308/armand8";
 //=========================//
 
 //=====SET BODY PARSER======//
