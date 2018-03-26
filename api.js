@@ -10,6 +10,23 @@ const app = express();
 const url = "mongodb://guestbook_app_example:react123@ds225308.mlab.com:25308/armand8";
 //=========================//
 
+//=====SET ACCESS======//
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'https://guestbookfront.herokuapp.com/');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers');
+
+    // Pass to next layer of middleware
+    next();
+});
+//=========================//
+
 //=====SET BODY PARSER======//
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
