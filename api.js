@@ -13,14 +13,10 @@ const url = "mongodb://guestbook_app_example:react123@ds225308.mlab.com:25308/ar
 //=====SET ACCESS======//
 app.use(function (req, res, next) {
 
-    // Website you wish to allow to connect
-    res.addHeader('Access-Control-Allow-Origin', '*');
-
-    // Request methods you wish to allow
-    res.addHeader('Access-Control-Allow-Methods', 'GET, POST');
-
-    // Request headers you wish to allow
-    res.addHeader('Access-Control-Allow-Headers');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Request-Method', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST');
+    res.setHeader('Access-Control-Allow-Headers', '*');
 
     // Pass to next layer of middleware
     next();
