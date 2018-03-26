@@ -1,11 +1,8 @@
 //====LIST DEPENDENCIES===//
-const express = require('express');
-const parseurl = require('parseurl');
+const express = require('express');;
 const bodyParser = require('body-parser');
-const path = require('path');
-const expressValidator = require('express-validator');
 const mongoose = require('mongoose');
-const Signature = require('./models/signature.js')
+const Signature = require('./models/signature.js');
 const app = express();
 const url = "mongodb://guestbook_app_example:react123@ds225308.mlab.com:25308/armand8";
 //=========================//
@@ -17,8 +14,6 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Request-Method', '*');
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST');
     res.setHeader('Access-Control-Allow-Headers', '*');
-
-    // Pass to next layer of middleware
     next();
 });
 //=========================//
